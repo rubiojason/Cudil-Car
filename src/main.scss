@@ -1,0 +1,468 @@
+//font-family: 'Train One', cursive; 
+//font-family: 'Orbitron', sans-serif;
+
+$main-color: rgb(8, 8, 8); 
+$secondary-color: rgb(139, 0, 0);
+
+.center {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+body {
+    color: white; 
+    font-size: 16px; 
+    background-color: $main-color; 
+}
+
+.page-container {
+    width: 100%; 
+    height: auto; 
+    text-align: center;
+    
+    .main-top-page {
+        width: 100%; 
+        height: 100vh; 
+        background: url('https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); 
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .main-top-content {
+            width: 100%; 
+            height: 65%; 
+            @extend .center; 
+            justify-content: space-between;
+            flex-direction: column; 
+            padding-top: 125px; 
+
+            .main-top-mid-div {
+                width: 40%; 
+                height: auto; 
+                @extend .center; 
+                flex-direction: column; 
+
+                h2 {
+                    font-family: 'Orbitron', sans-serif;
+                    font-size: 2.25em; 
+                }
+
+                button {
+                    position: relative; 
+                    //width: 200px; 
+                    //height: 70px; 
+                    width: 175px; 
+                    height: 60px; 
+                    color: rgb(139, 0, 0); 
+                    background-color: white;
+                    border: none;  
+                    border-radius: 2px; 
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+                    font-weight: 500; 
+                    cursor: pointer; 
+                    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+                    outline: none; 
+                    z-index: 10; 
+                    opacity: 0; 
+                
+                    &:hover {
+                      color: white !important;
+                      //background-color: transparent;
+                    }
+                
+                    &:hover::before {
+                      left: 0%;
+                      right: auto;
+                      width: 100%;
+                    }
+                
+                    &::before {
+                      position: absolute;
+                      top: 0px;
+                      right: 0px;
+                      height: 100%;
+                      width: 0px;
+                      z-index: -1;
+                      content: '';
+                      border-radius: 2px; 
+                      background: rgb(139, 0, 0); 
+                      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+                    }
+                  }
+            }
+
+            .main-top-bottom-div {
+                width: 80%; 
+                height: auto; 
+                @extend .center; 
+                justify-content: space-between;
+
+                div {
+                    display: inline; 
+                    width: auto; 
+                    height: auto; 
+
+                    h4 {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+                        font-weight: 400; 
+                        font-size: 0.85em; 
+                        margin: 0px; 
+                        margin-bottom: 5px; 
+                    }
+
+                    h3 {
+                        font-family:'Times New Roman', Times, serif; 
+                        font-weight: 600; 
+                        font-size: 1.75em; 
+                        margin: 0px; 
+                    }
+                }
+            } 
+        }   
+    }
+
+    .main-mid-page {
+        width: 100%; 
+        height: auto; 
+        background-color: $main-color;  
+        @extend .center; 
+        flex-direction: column; 
+
+        .main-mid-car-container {
+            position: relative; 
+            width: 100%; 
+            height: 300px; 
+            background: url('https://www.lucidmotors.com/static/bg-web-bc2e3bbde75e633ce9c5e4a309439f20.jpg'); 
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 10px 0px; 
+
+            .car-img {
+                width: 100%; 
+                height: auto; 
+                @extend .center; 
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover; 
+                }
+            }
+
+            .car-info {
+                position: absolute; 
+                bottom: 5%; 
+                width: 100%; 
+                height: auto; 
+
+                h2 {
+                    font-family: 'Times New Roman', Times, serif; 
+                    font-weight: 600; 
+                    margin: 0px; 
+                }
+
+                p {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+                    font-weight: 400; 
+                    font-size: 0.85em; 
+                    margin: 0px; 
+                }
+            }
+        }
+    }
+
+    .main-bottom-page {
+        width: 100%; 
+        height: auto; 
+        background-color: $main-color; 
+        @extend .center; 
+        flex-direction: column; 
+        padding: 50px 0px; 
+
+        h1 {
+            width: 85%; 
+            font-family: 'Times New Roman', Times, serif; 
+            font-weight: 600; 
+            text-align: left; 
+            margin: 0px; 
+        }
+
+        .main-bottom-carousel {
+            width: 95%; 
+            overflow-x: scroll; 
+            display: flex; 
+            justify-items: center;
+
+            &::-webkit-scrollbar {
+                width: 200px;
+                height: 7px;
+                cursor: pointer; 
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: white;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: rgb(225, 225, 225); 
+                }
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px rgb(80, 80, 80);
+            }
+
+            .main-bottom-carousel-div-content {
+                width: auto; 
+                height: auto; 
+                //background-color: rgb(20, 20, 20); 
+                white-space: nowrap;
+                padding: 40px; 
+                margin: 40px 0px; 
+                //border-left: 1px solid rgba(255, 255, 255, 0.2); 
+                border-right: 1px solid rgba(255, 255, 255, 0.2);      
+
+                .main-carousel-img {
+                    
+
+                    img {
+                        width: 200px; 
+                        height: 125px; 
+                    }
+                }
+
+                .main-carousel-info {
+                    white-space:pre-wrap !important;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+                    font-weight: 300; 
+                    text-align: left; 
+                }
+            }
+        }
+    }
+
+    .main-bottom-nav {
+        width: 100%; 
+        height: auto;
+        background-color: white;  
+        @extend .center; 
+        flex-direction: column;
+        color: rgb(100, 100, 100); 
+        padding: 70px 0px; 
+
+        .main-bottom-nav-grid-display {
+            width: 85%; 
+            height: auto; 
+            display: flex; 
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .main-bottom-nav-content {
+                flex-basis: calc(50% - 1em); 
+                text-align: left; 
+
+                h3 {
+                    margin: 10px 0px;
+                    font-family: sans-serif; 
+                    font-size: 1em; 
+                }
+
+                #main-rec {
+                    width: 100%; 
+                    height: 1px; 
+                    background-color: rgba(0, 0, 0, 0.3); 
+                }
+
+                /*.main-p-container {
+                    width: auto; 
+                    height: auto; 
+                    display: inline-block;
+                    
+                    .main-p-flex {
+                        display: flex; 
+                        flex-direction: column; */
+                    ul {
+                        display: inline-block; 
+                        padding: 0px; 
+                        width: 200px; 
+                        
+
+                        span {
+                            margin: 10px 0px; 
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+                            font-size: 0.9em; 
+                            display: inline; 
+                            position: relative; 
+                            float: left; 
+                            margin-right: 55px;
+                            cursor: pointer; 
+
+                            &::after {
+                                content: '';
+                                position: absolute; 
+                                display: block;
+                                left: 0; 
+                                bottom: -2; 
+                                width: 0;
+                                height: 2px;
+                                background: rgba(0, 0, 0, 0.3);
+                                transition: width .3s;
+                            }       
+                            
+                            &:hover::after {
+                                width: 100%;
+                            }
+                        //}
+                    }
+                }                
+            }            
+        }
+
+        #main-terms {
+            width: 85%; 
+            font-size: 0.85em;
+            margin: 35px 0px; 
+            text-align: left; 
+            cursor: pointer; 
+        }
+    }
+}
+
+
+//measures 
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .page-container .main-mid-page .main-mid-car-container {
+        height: 425px; 
+        margin: 0px; 
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    .page-container .main-mid-page .main-mid-car-container {
+        height: 500px; 
+        margin: 0px; 
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+    .page-container .main-mid-page .main-mid-car-container {
+        height: 550px; 
+        margin: 0px; 
+    }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1900px) {
+    .page-container .main-mid-page .main-mid-car-container {
+        height: 650px; 
+        margin: 0px; 
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .page-container .main-mid-page .main-mid-car-container {
+        height: 700px; 
+        margin: 0px; 
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .page-container .main-bottom-page .main-bottom-carousel .main-bottom-carousel-div-content .main-carousel-img img {
+        width: 300px; 
+        height: 175px; 
+    }
+
+    .page-container .main-bottom-page .main-bottom-carousel .main-bottom-carousel-div-content .main-carousel-info {
+        font-size: 1.55em; 
+    }
+
+    .page-container .main-bottom-page h1 {
+        font-size: 3em !important; 
+    }
+
+    .page-container .main-bottom-page .main-bottom-carousel {
+        width: 70%; 
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .page-container .main-bottom-nav .main-bottom-nav-grid-display {
+        width: 70%; 
+    }
+
+    .page-container .main-bottom-nav .main-bottom-nav-grid-display .main-bottom-nav-content {
+        flex-basis: 30%;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .page-container .main-bottom-nav .main-bottom-nav-grid-display {
+        width: 45%; 
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .page-container .main-bottom-page h1 {
+        width: 95%; 
+    }
+}
+
+
+
+//fonts 
+@media only screen and (min-width: 1024px) {
+    .page-container .main-top-page .main-top-content .main-top-mid-div h2 {
+        font-size: 3.5em; 
+    }
+
+    .page-container .main-top-page .main-top-content .main-top-mid-div button {
+        width: 200px; 
+        height: 70px; 
+    }
+
+    .page-container .main-top-page .main-top-content .main-top-bottom-div div h4 {
+        font-size: 1.15em; 
+    }
+
+    .page-container .main-top-page .main-top-content .main-top-bottom-div div h3 {
+        font-size: 2.5em; 
+    }
+
+    .page-container .main-mid-page .main-mid-car-container .car-info h2 {
+        font-size: 2.25em; 
+    }
+
+    .page-container .main-mid-page .main-mid-car-container .car-info p {
+        font-size: 1.15em;
+    }
+
+    .page-container .main-bottom-nav .main-bottom-nav-grid-display .main-bottom-nav-content h3 {
+        font-size: 1.35em; 
+    }
+
+    .page-container .main-bottom-nav .main-bottom-nav-grid-display .main-bottom-nav-content ul span {
+        font-size: 1.1em; 
+    }
+
+    .page-container .main-bottom-nav #main-terms {
+        font-size: 1em; 
+    }
+}
+
+//webkit 
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+    .page-container .main-bottom-page .main-bottom-carousel::-webkit-scrollbar {
+        height: 15px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .page-container .main-bottom-page .main-bottom-carousel::-webkit-scrollbar {
+        height: 25px;
+    }
+}
