@@ -195,7 +195,6 @@ body {
 
         .main-bottom-carousel {
             width: 95%; 
-            overflow-x: scroll; 
             display: flex; 
             justify-items: center;
 
@@ -465,4 +464,50 @@ body {
     .page-container .main-bottom-page .main-bottom-carousel::-webkit-scrollbar {
         height: 25px;
     }
+}
+
+.fzCwXm {
+    background-color: rgb(20, 20, 20) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 2px !important;
+    border: 1px rgba(255, 255, 255, 0.2) solid !important;
+
+    &:hover {
+        background-color: rgb(20, 20, 20) !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        border-radius: 2px !important;
+        border: 1px rgba(255, 255, 255, 0.2) solid !important;
+    }
+
+    &:focus {
+        background-color: rgb(20, 20, 20) !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        border-radius: 2px !important;
+        border: 1px rgba(255, 255, 255, 0.2) solid !important; 
+    }
+}
+
+.fzDWsc {
+    background-color: rgb(20, 20, 20) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 2px !important;
+    border: 1px rgba(255, 255, 255, 0.2) solid !important;
+
+    &:hover {
+        background-color: rgb(5, 5, 5) !important;
+        color: rgba(255, 255, 255, 1) !important;
+        border-radius: 2px !important;
+        border: 1px rgba(255, 255, 255, 0.2) solid !important;
+    }
+
+    &:focus {
+        background-color: rgb(20, 20, 20) !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        border-radius: 2px !important;
+        border: 1px rgba(255, 255, 255, 0.2) solid !important;
+    }
+}
+
+.kMthTr {
+    display: none !important; 
 }

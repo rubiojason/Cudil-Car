@@ -2,10 +2,18 @@ import React, { useEffect, useRef } from 'react'
 import NavComponent from './NavComponent'; 
 import gsap from 'gsap'; 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'; 
-
+import Carousel from 'react-elastic-carousel'
 gsap.registerPlugin(ScrollTrigger); 
 
 function MainPage() {
+
+    //carousel 
+    const breakPoints = [
+        { width: 1, itemsToShow: 1 },
+        { width: 650, itemsToShow: 2 },
+        { width: 1200, itemsToShow: 3 },
+        { width: 1500, itemsToShow: 4 },
+      ];
 
     //useRef 
     const titleAnim = useRef(null); 
@@ -32,37 +40,37 @@ function MainPage() {
 
         gsap.fromTo(bottomNav1.current, {autoAlpha: 0}, {duration: 1, autoAlpha: 1, ease: 'none', 
                                         scrollTrigger: {id: 'ello', trigger: bottomNav1.current, 
-                                        start: 'top center', toggleActions: 'play none none reverse', 
+                                        start: 'top bottom-=100px', toggleActions: 'play none none reverse', 
                                         markers: false}}); 
 
         gsap.fromTo(bottomNav2.current, {autoAlpha: 0}, {duration: 1, autoAlpha: 1, ease: 'none', 
                                         scrollTrigger: {id: 'ello', trigger: bottomNav2.current, 
-                                        start: 'top center', toggleActions: 'play none none reverse', 
+                                        start: 'top bottom-=100px', toggleActions: 'play none none reverse', 
                                         markers: false}}); 
 
         gsap.fromTo(bottomNav3.current, {autoAlpha: 0}, {duration: 1, autoAlpha: 1, ease: 'none', 
                                         scrollTrigger: {id: 'ello', trigger: bottomNav3.current, 
-                                        start: 'top center', toggleActions: 'play none none reverse', 
+                                        start: 'top bottom-=100px', toggleActions: 'play none none reverse', 
                                         markers: false}}); 
 
         gsap.fromTo(car1TextAnim.current, {autoAlpha: 0, x: -35}, {duration: 1, autoAlpha: 1, ease: 'none', x: 0, 
                                           scrollTrigger: {id: 'ello', trigger: car1TextAnim.current, 
-                                          start: 'top center', toggleActions: 'play none none reverse', 
+                                          start: 'top bottom-=100px', toggleActions: 'play none none reverse', 
                                           markers: false}}); 
 
         gsap.fromTo(car2TextAnim.current, {autoAlpha: 0, x: -35}, {duration: 1, autoAlpha: 1, ease: 'none', x: 0, 
                                           scrollTrigger: {id: 'ello', trigger: car2TextAnim.current, 
-                                          start: 'top center', toggleActions: 'play none none reverse', 
+                                          start: 'top bottom-=100px', toggleActions: 'play none none reverse', 
                                           markers: false}}); 
 
         gsap.fromTo(car3TextAnim.current, {autoAlpha: 0, x: -35}, {duration: 1, autoAlpha: 1, ease: 'none', x: 0, 
                                           scrollTrigger: {id: 'ello', trigger: car3TextAnim.current, 
-                                          start: 'top center', toggleActions: 'play none none reverse', 
+                                          start: 'top bottom-=100px', toggleActions: 'play none none reverse', 
                                           markers: false}});
                                           
         gsap.fromTo(car4TextAnim.current, {autoAlpha: 0, x: -35}, {duration: 1, autoAlpha: 1, ease: 'none', x: 0, 
                                           scrollTrigger: {id: 'ello', trigger: car4TextAnim.current, 
-                                          start: 'top center', toggleActions: 'play none none reverse', 
+                                          start: 'top bottom-=100px', toggleActions: 'play none none reverse', 
                                           markers: false}}); 
 
     }, [titleAnim, buttonAnim]); 
@@ -136,8 +144,9 @@ function MainPage() {
             </div>
 
             <div className="main-bottom-page">
-                <h1>Stories</h1>
-                <div className="main-bottom-carousel">
+            <div className="main-bottom-carousel">
+                <Carousel breakPoints={breakPoints}>
+
                     <div className="main-bottom-carousel-div-content">
                         <div className="main-carousel-img">
                             <img alt="" src="https://images.pexels.com/photos/3608056/pexels-photo-3608056.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
@@ -147,7 +156,7 @@ function MainPage() {
                         </h3>
                     </div>
 
-                    {/*<div className="main-bottom-carousel-block">1</div>*/}
+                            {/*<div className="main-bottom-carousel-block">1</div>*/}
 
                     <div className="main-bottom-carousel-div-content">
                         <div className="main-carousel-img">
@@ -171,7 +180,7 @@ function MainPage() {
 
                     {/*<div className="main-bottom-carousel-block">1</div>*/}
 
-                    <div className="main-bottom-carousel-div-content">
+                     <div className="main-bottom-carousel-div-content">
                         <div className="main-carousel-img">
                             <img alt="" src="https://images.pexels.com/photos/3862634/pexels-photo-3862634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
                         </div>
@@ -179,8 +188,6 @@ function MainPage() {
                             Ut laborum nulla quis et elit sit occaecat eu magna laborum voluptate.
                         </h3>
                     </div>
-
-                    {/*<div className="main-bottom-carousel-block">1</div>*/}
 
                     <div className="main-bottom-carousel-div-content">
                         <div className="main-carousel-img">
@@ -227,7 +234,8 @@ function MainPage() {
                         </h3>
                     </div>
 
-                </div> 
+                </Carousel>
+            </div>
             </div>
 
             <div className="main-bottom-nav">
