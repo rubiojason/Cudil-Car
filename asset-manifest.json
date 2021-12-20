@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Cudil-Car/static/css/main.8d33eb32.chunk.css",
+    "main.js": "/Cudil-Car/static/js/main.d3cd3cc5.chunk.js",
+    "main.js.map": "/Cudil-Car/static/js/main.d3cd3cc5.chunk.js.map",
+    "runtime-main.js": "/Cudil-Car/static/js/runtime-main.4c685ee6.js",
+    "runtime-main.js.map": "/Cudil-Car/static/js/runtime-main.4c685ee6.js.map",
+    "static/js/2.e21a8cd1.chunk.js": "/Cudil-Car/static/js/2.e21a8cd1.chunk.js",
+    "static/js/2.e21a8cd1.chunk.js.map": "/Cudil-Car/static/js/2.e21a8cd1.chunk.js.map",
+    "static/js/3.26747207.chunk.js": "/Cudil-Car/static/js/3.26747207.chunk.js",
+    "static/js/3.26747207.chunk.js.map": "/Cudil-Car/static/js/3.26747207.chunk.js.map",
+    "index.html": "/Cudil-Car/index.html",
+    "static/css/main.8d33eb32.chunk.css.map": "/Cudil-Car/static/css/main.8d33eb32.chunk.css.map",
+    "static/js/2.e21a8cd1.chunk.js.LICENSE.txt": "/Cudil-Car/static/js/2.e21a8cd1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c685ee6.js",
+    "static/js/2.e21a8cd1.chunk.js",
+    "static/css/main.8d33eb32.chunk.css",
+    "static/js/main.d3cd3cc5.chunk.js"
+  ]
+}
