@@ -103,27 +103,7 @@ function MainPage() {
 
                 <div className="main-mid-car-container">
                     <div className="car-img">
-                        <img alt="" src="https://www.lucidmotors.com/static/c7ff376df1c4b25a661c7413ddf09911/pure-v4-web.png" />
-                    </div>
-                    <div className="car-info" ref={car1TextAnim}>
-                        <h2>AirPure</h2>
-                        <p>From $70,000 / 500hp / 406 mi range</p>
-                    </div>
-                </div>
-
-                <div className="main-mid-car-container">
-                    <div className="car-img">
-                        <img alt="" src="https://www.lucidmotors.com/static/f88afcd3e921898b1acd4059ea305f00/dream-edition-v4-web.png" />
-                    </div>
-                    <div className="car-info" ref={car2TextAnim}>
-                        <h2>Air Dream Edition</h2>
-                        <p>$150,000 / 1000 hp / 500 mi range</p>
-                    </div>
-                </div>
-
-                <div className="main-mid-car-container">
-                    <div className="car-img">
-                        <img alt="" src="https://www.lucidmotors.com/static/5e380ae74f374629831dd38061653ebd/grand-touring-v4-web.png" />
+                        <img alt="" src={process.env.PUBLIC_URL + "/red-car.png"} />
                     </div>
                     <div className="car-info" ref={car3TextAnim}>
                         <h2>Air Grand Touring</h2>
@@ -133,11 +113,31 @@ function MainPage() {
 
                 <div className="main-mid-car-container">
                     <div className="car-img">
-                        <img alt="" src="https://www.lucidmotors.com/static/d26f5f612a0a2e57e1113a85a5a9e7ef/touring-v4-web.png" />
+                        <img alt="" src={process.env.PUBLIC_URL + "/brown-car.png"} />
                     </div>
                     <div className="car-info" ref={car4TextAnim}>
                         <h2>Air Touring</h2>
                         <p>$80,000 / 600 hp / 400 mi range</p>
+                    </div>
+                </div>
+
+                <div className="main-mid-car-container">
+                    <div className="car-img">
+                        <img alt="" src={process.env.PUBLIC_URL + "/gray-car.png"} />
+                    </div>
+                    <div className="car-info" ref={car1TextAnim}>
+                        <h2>AirPure</h2>
+                        <p>From $70,000 / 500hp / 406 mi range</p>
+                    </div>
+                </div>
+
+                <div className="main-mid-car-container">
+                    <div className="car-img">
+                        <img alt="" src={process.env.PUBLIC_URL + "/black-car.png"} />
+                    </div>
+                    <div className="car-info" ref={car2TextAnim}>
+                        <h2>Air Dream Edition</h2>
+                        <p>$150,000 / 1000 hp / 500 mi range</p>
                     </div>
                 </div>
 
